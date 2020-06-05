@@ -44,7 +44,7 @@ wget https://www.rocq.inria.fr/cluster-willow/amiech/howto100m/howto100m_caption
 Finally the preprocessed HowTo100M videos (12Tb in total) can be downloaded by filling this Google form: https://forms.gle/hztrfnFQUJWBtiki8.
 We advise you save the HowTo100M videos as well as the caption files in a fast access disk such as SSDs disks to significantly speedup the training.
 
-## Training
+## Training MIL-NCE on HowTo100M
 
 The following command trains the model on a single node, uses all of its GPU and checkpoints the model in the directory checkpoint/milnce, the log are written in the *log* directory.
 Do not forget to replace *path_to_howto_csv* by the path to the HowTo100M csv cation files and *path_to_howto_videos* to the path where the HowTo100M videos were downloaded.
@@ -60,9 +60,9 @@ python main_distributed.py --n_display=1 \
 
 You can also monitor the evaluation on the zero-shot YouCook2 retrieval task by specifying the argument --evaluate as well as *--eval_video_root=path_to_youcook2_video*
 
-Note 1: The batch size value set here is the total batch size for the node, so if batch size is 256 and there are 4 GPUs, the batch size for each GPU will be 64.
-Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is equivalent to the number of different video (and not clip) in HowTo100M.
-Note 3: The training code should be distributed over multiple tasks with SLURM for distributed training.
+- Note 1: The batch size value set here is the total batch size for the node, so if batch size is 256 and there are 4 GPUs, the batch size for each GPU will be 64.
+- Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is equivalent to the number of different video (and not clip) in HowTo100M.
+- Note 3: The training code should be distributed over multiple tasks with SLURM for distributed training.
 
 ## Linear evaluation of representation on HMDB-51 action recognition dataset 
 
