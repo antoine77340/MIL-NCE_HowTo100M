@@ -6,7 +6,7 @@ The original codebase from [1] rely on Google and DeepMind internal tools as wel
 Instead, this repository is an attempt to a complete rewritting from scratch of [1] on PyTorch / ffmpeg with a reasonable number of GPUs.
 
 The training code was runned on the French public AI cluster [Jean-Zay](idris.fr/eng/) (see Acknowledgements below).
-It was specifically design to run on a SLURM based cluster management for multi-node distributed training but can be easily modify for other cluster management system.
+It was specifically designed to run on a SLURM based cluster management for multi-node distributed training but can be easily modify for other cluster management system.
 
 This unofficial PyTorch rewritting of the paper has several minor differences such as:
 - The use of a cosine learning rate decay instead of the stepwise decay described in [1].
@@ -23,11 +23,11 @@ If you use this code, we would appreciate if you could both cite [1] and [2] :).
 - pandas
 - tqdm (for evaluation only)
 - scikit-learn (for linear evaluation only)
-(- SLURM cluster management for distributed training but can be easily modified for other cluster management system)
+- SLURM cluster management for distributed training but can be easily modified for other cluster management system
 
 ## Getting preliminary word2vec and HowTo100M data for training
 
-You will first need to download the word2vec matrix and dictionary.
+You will first need to download the word2vec matrix and dictionary and unzip the file in the same directory as the code, in the data folder.
 
 ```sh
 wget https://www.rocq.inria.fr/cluster-willow/amiech/word2vec.zip
@@ -50,7 +50,11 @@ The following command trains the model on a single node, uses all of its GPU and
 Do not forget to replace *path_to_howto_csv* by the path to the HowTo100M csv cation files and *path_to_howto_videos* to the path where the HowTo100M videos were downloaded.
 
 ```sh
-python main_distributed.py --n_display=1 --multiprocessing-distributed --batch_size=256 --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory --checkpoint_dir=milnce --num_candidates=4 --resume --lr=0.001 --warmup_steps=10000 --epochs=300 --caption_root=path_to_howto_csv --video_path=path_to_howto_videos
+python main_distributed.py --n_display=1 \
+       --multiprocessing-distributed --batch_size=256 \
+       --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory \
+       --checkpoint_dir=milnce --num_candidates=4 --resume --lr=0.001 \
+       --warmup_steps=10000 --epochs=300 --caption_root=path_to_howto_csv --video_path=path_to_howto_videos
 ```
 
 
@@ -74,7 +78,8 @@ on the features.
 To run the evaluation:
 
 ```sh
-python eval_hmdb.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10  --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
+python eval_hmdb.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 \
+        --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
 ```
 You will need to replace *path_to_the_youcook_videos* by the root folder containing the downloaded HMDB videos.
 
@@ -83,8 +88,8 @@ This table compares the results of the linear evaluation of the representation o
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
 <th valign="bottom">Implementation</th>
-<th valign="bottom">epochs</th>
-<th valign="bottom">total batch size</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">Total batch size</th>
 <th valign="bottom">Accelarator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
@@ -139,7 +144,8 @@ This evaluation will run the zero-shot text-video retrieval on the MSR-VTT subse
 You will need to replace *the_path_to_the_checkpoint* by your model checkpoint path and *path_to_the_msrvtt_videos* to the root folder containing the downloaded MSR-VTT testing videos. 
 
 ```sh
-python eval_msrvtt.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 --eval_video_root=path_to_the_msrvtt_videos --pretrain_cnn_path=the_path_to_the_checkpoint
+python eval_msrvtt.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 \
+       --eval_video_root=path_to_the_msrvtt_videos --pretrain_cnn_path=the_path_to_the_checkpoint
 ```
 
 This table compares the retrieval results with the original implementation and this one under various number of training epoch and training batch size.
@@ -149,8 +155,8 @@ This table compares the retrieval results with the original implementation and t
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
 <th valign="bottom">Implementation</th>
-<th valign="bottom">epochs</th>
-<th valign="bottom">total batch size</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">Total batch size</th>
 <th valign="bottom">Accelarator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
@@ -211,15 +217,16 @@ This evaluation will run the zero-shot text-video retrieval on the validation Yo
 Please replace *the_path_to_the_checkpoint* by your model checkpoint path and *path_to_the_youcook_videos* to the root folder containing the downloaded MSR-VTT testing videos. 
 
 ```sh
-python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10  --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
+python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 \
+        --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
 ```
 
 <table><tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
 <th valign="bottom">Implementation</th>
-<th valign="bottom">epochs</th>
-<th valign="bottom">total batch size</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">Total batch size</th>
 <th valign="bottom">Accelarator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
@@ -305,4 +312,5 @@ Bibtex:
 # Acknowledgements
 
 This work was granted access to the HPC resources of IDRIS under the allocation 2020-AD011011325 made by GENCI.
+
 The SLURM distributed training code was also mainly inspired from this great [repo](https://github.com/ShigekiKarita/pytorch-distributed-slurm-example) 
