@@ -5,7 +5,7 @@ The original codebase from [1] rely on Google and DeepMind internal tools as wel
 
 Instead, this repository is an attempt to a complete rewritting from scratch of [1] on PyTorch / ffmpeg with a reasonable number of GPUs.
 
-The training code was runned on the French public AI cluster [Jean-Zay](www.idris.fr/eng/) (see Acknowledgements below).
+The training code was runned on the French public AI cluster [Jean-Zay](https://www.idris.fr/eng/) (see Acknowledgements below).
 It was specifically designed to run on a SLURM based cluster management for multi-node distributed training but can be easily modify for other cluster management system.
 
 This unofficial PyTorch rewritting of the paper has several minor differences such as:
