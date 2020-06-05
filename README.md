@@ -5,7 +5,7 @@ The original codebase from [1] rely on Google and DeepMind internal tools as wel
 
 Instead, this repository is an attempt to a complete rewritting from scratch of [1] on PyTorch / ffmpeg with a reasonable number of GPUs.
 
-The training code was runned on the French public AI cluster [Jean-Zay](idris.fr/eng/) (see Acknowledgements below).
+The training code was runned on the French public AI cluster [Jean-Zay](www.idris.fr/eng/) (see Acknowledgements below).
 It was specifically designed to run on a SLURM based cluster management for multi-node distributed training but can be easily modify for other cluster management system.
 
 This unofficial PyTorch rewritting of the paper has several minor differences such as:
@@ -61,7 +61,7 @@ python main_distributed.py --n_display=1 \
 You can also monitor the evaluation on the zero-shot YouCook2 retrieval task by specifying the argument --evaluate as well as *--eval_video_root=path_to_youcook2_video*
 
 - Note 1: The batch size value set here is the total batch size for the node, so if batch size is 256 and there are 4 GPUs, the batch size for each GPU will be 64.
-- Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is equivalent to the number of different video (and not clip) in HowTo100M.
+- Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is the number of different video in HowTo100M. It is not the same as the number of different training video clips as they are more than 100M clips. 
 - Note 3: The training code should be distributed over multiple tasks with SLURM for distributed training.
 
 ## Linear evaluation of representation on HMDB-51 action recognition dataset 
@@ -79,9 +79,9 @@ To run the evaluation:
 
 ```sh
 python eval_hmdb.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 \
-        --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
+        --eval_video_root=path_to_the_videos --pretrain_cnn_path=the_path_to_the_checkpoint
 ```
-You will need to replace *path_to_the_youcook_videos* by the root folder containing the downloaded HMDB videos.
+You will need to replace *path_to_the_videos* by the root folder containing the downloaded HMDB videos.
 
 This table compares the results of the linear evaluation of the representation on HMDB-51 with the original implementation and this one under various number of training epoch and training batch size.
 <table><tbody>
@@ -313,4 +313,4 @@ Bibtex:
 
 This work was granted access to the HPC resources of IDRIS under the allocation 2020-AD011011325 made by GENCI.
 
-The SLURM distributed training code was also mainly inspired from this great [repo](https://github.com/ShigekiKarita/pytorch-distributed-slurm-example) 
+The SLURM distributed training code was also mainly inspired from this great [repo](https://github.com/ShigekiKarita/pytorch-distributed-slurm-example). 
