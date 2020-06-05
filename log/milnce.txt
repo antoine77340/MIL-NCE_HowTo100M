@@ -1,0 +1,241 @@
+=> no checkpoint found at 'True'
+=> no checkpoint found at 'True'
+=> no checkpoint found at 'True'
+=> no checkpoint found at 'True'
+Starting training loop for rank: 0, total batch size: 256
+Starting training loop for rank: 2, total batch size: 256
+Starting training loop for rank: 1, total batch size: 256
+Starting training loop for rank: 3, total batch size: 256
+Epoch 1, Elapsed Time: 52.365, Epoch status: 0.0000, Training loss: 6.3392, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.253, Epoch status: 0.0002, Training loss: 6.3174, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.267, Epoch status: 0.0004, Training loss: 6.4048, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.267, Epoch status: 0.0006, Training loss: 6.2935, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.300, Epoch status: 0.0008, Training loss: 6.3106, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.319, Epoch status: 0.0010, Training loss: 6.3274, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.302, Epoch status: 0.0012, Training loss: 6.2919, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.330, Epoch status: 0.0014, Training loss: 6.3098, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0017, Training loss: 6.2898, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.315, Epoch status: 0.0019, Training loss: 6.2590, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.341, Epoch status: 0.0021, Training loss: 6.2671, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.286, Epoch status: 0.0023, Training loss: 6.2596, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.351, Epoch status: 0.0025, Training loss: 6.2668, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.295, Epoch status: 0.0027, Training loss: 6.2534, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.288, Epoch status: 0.0029, Training loss: 6.2465, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.271, Epoch status: 0.0031, Training loss: 6.2502, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.364, Epoch status: 0.0033, Training loss: 6.2402, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.273, Epoch status: 0.0035, Training loss: 6.2401, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.328, Epoch status: 0.0037, Training loss: 6.2448, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.383, Epoch status: 0.0039, Training loss: 6.2451, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.269, Epoch status: 0.0041, Training loss: 6.2406, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.342, Epoch status: 0.0043, Training loss: 6.2388, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.303, Epoch status: 0.0045, Training loss: 6.2393, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.291, Epoch status: 0.0048, Training loss: 6.2421, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.310, Epoch status: 0.0050, Training loss: 6.2349, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.327, Epoch status: 0.0052, Training loss: 6.2404, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.335, Epoch status: 0.0054, Training loss: 6.2433, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.335, Epoch status: 0.0056, Training loss: 6.2378, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.340, Epoch status: 0.0058, Training loss: 6.2394, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.402, Epoch status: 0.0060, Training loss: 6.2451, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.419, Epoch status: 0.0062, Training loss: 6.2405, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.250, Epoch status: 0.0064, Training loss: 6.2476, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.340, Epoch status: 0.0066, Training loss: 6.2461, Learning rate: 0.000003
+=> no checkpoint found at 'True'
+Starting training loop for rank: 1, total batch size: 256
+=> no checkpoint found at 'True'
+Starting training loop for rank: 0, total batch size: 256
+=> no checkpoint found at 'True'
+Starting training loop for rank: 2, total batch size: 256
+=> no checkpoint found at 'True'
+Starting training loop for rank: 3, total batch size: 256
+Epoch 1, Elapsed Time: 53.109, Epoch status: 0.0000, Training loss: 6.2457, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.317, Epoch status: 0.0002, Training loss: 6.2655, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.280, Epoch status: 0.0004, Training loss: 6.2503, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.217, Epoch status: 0.0006, Training loss: 6.2476, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.278, Epoch status: 0.0008, Training loss: 6.2459, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.312, Epoch status: 0.0010, Training loss: 6.2456, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.292, Epoch status: 0.0012, Training loss: 6.2426, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.316, Epoch status: 0.0014, Training loss: 6.2457, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.286, Epoch status: 0.0017, Training loss: 6.2551, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.295, Epoch status: 0.0019, Training loss: 6.2456, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.353, Epoch status: 0.0021, Training loss: 6.2465, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.337, Epoch status: 0.0023, Training loss: 6.2471, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.289, Epoch status: 0.0025, Training loss: 6.2476, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.322, Epoch status: 0.0027, Training loss: 6.2466, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.331, Epoch status: 0.0029, Training loss: 6.2433, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.296, Epoch status: 0.0031, Training loss: 6.2455, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.312, Epoch status: 0.0033, Training loss: 6.2448, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.336, Epoch status: 0.0035, Training loss: 6.2415, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.399, Epoch status: 0.0037, Training loss: 6.2429, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.295, Epoch status: 0.0039, Training loss: 6.2425, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0041, Training loss: 6.2379, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.321, Epoch status: 0.0043, Training loss: 6.2457, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.340, Epoch status: 0.0045, Training loss: 6.2506, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.317, Epoch status: 0.0048, Training loss: 6.2396, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.330, Epoch status: 0.0050, Training loss: 6.2430, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.322, Epoch status: 0.0052, Training loss: 6.2430, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.282, Epoch status: 0.0054, Training loss: 6.2387, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.330, Epoch status: 0.0056, Training loss: 6.2428, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.295, Epoch status: 0.0058, Training loss: 6.2412, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.372, Epoch status: 0.0060, Training loss: 6.2418, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.326, Epoch status: 0.0062, Training loss: 6.2399, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.285, Epoch status: 0.0064, Training loss: 6.2438, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.390, Epoch status: 0.0066, Training loss: 6.2416, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.219, Epoch status: 0.0068, Training loss: 6.2369, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.308, Epoch status: 0.0070, Training loss: 6.2386, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.334, Epoch status: 0.0072, Training loss: 6.2353, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.315, Epoch status: 0.0074, Training loss: 6.2388, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.386, Epoch status: 0.0076, Training loss: 6.2443, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.304, Epoch status: 0.0079, Training loss: 6.2307, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.296, Epoch status: 0.0081, Training loss: 6.2384, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0083, Training loss: 6.2467, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.316, Epoch status: 0.0085, Training loss: 6.2399, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.302, Epoch status: 0.0087, Training loss: 6.2443, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.331, Epoch status: 0.0089, Training loss: 6.2446, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.385, Epoch status: 0.0091, Training loss: 6.2396, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.401, Epoch status: 0.0093, Training loss: 6.2415, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.279, Epoch status: 0.0095, Training loss: 6.2396, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.335, Epoch status: 0.0097, Training loss: 6.2398, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.302, Epoch status: 0.0099, Training loss: 6.2337, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.371, Epoch status: 0.0101, Training loss: 6.2364, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.322, Epoch status: 0.0103, Training loss: 6.2347, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.439, Epoch status: 0.0105, Training loss: 6.2354, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0107, Training loss: 6.2376, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.275, Epoch status: 0.0110, Training loss: 6.2365, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.291, Epoch status: 0.0112, Training loss: 6.2354, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.296, Epoch status: 0.0114, Training loss: 6.2337, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.323, Epoch status: 0.0116, Training loss: 6.2349, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.392, Epoch status: 0.0118, Training loss: 6.2255, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.282, Epoch status: 0.0120, Training loss: 6.2335, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.342, Epoch status: 0.0122, Training loss: 6.2305, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.316, Epoch status: 0.0124, Training loss: 6.2379, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.551, Epoch status: 0.0126, Training loss: 6.2420, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.155, Epoch status: 0.0128, Training loss: 6.2333, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.310, Epoch status: 0.0130, Training loss: 6.2302, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.269, Epoch status: 0.0132, Training loss: 6.2338, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.325, Epoch status: 0.0134, Training loss: 6.2337, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.321, Epoch status: 0.0136, Training loss: 6.2234, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.325, Epoch status: 0.0138, Training loss: 6.2280, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.250, Epoch status: 0.0141, Training loss: 6.2332, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.312, Epoch status: 0.0143, Training loss: 6.2284, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.376, Epoch status: 0.0145, Training loss: 6.2229, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.279, Epoch status: 0.0147, Training loss: 6.2333, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.325, Epoch status: 0.0149, Training loss: 6.2309, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.323, Epoch status: 0.0151, Training loss: 6.2288, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.306, Epoch status: 0.0153, Training loss: 6.2282, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.297, Epoch status: 0.0155, Training loss: 6.2344, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.331, Epoch status: 0.0157, Training loss: 6.2352, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0159, Training loss: 6.2257, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.239, Epoch status: 0.0161, Training loss: 6.2340, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.316, Epoch status: 0.0163, Training loss: 6.2388, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.275, Epoch status: 0.0165, Training loss: 6.2323, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.322, Epoch status: 0.0167, Training loss: 6.2198, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.323, Epoch status: 0.0169, Training loss: 6.2263, Learning rate: 0.000008
+=> no checkpoint found at 'True'
+Starting training loop for rank: 3, total batch size: 256
+=> no checkpoint found at 'True'
+=> no checkpoint found at 'True'
+Starting training loop for rank: 1, total batch size: 256
+Starting training loop for rank: 0, total batch size: 256
+Evaluating on YouCook2
+=> no checkpoint found at 'True'
+Starting training loop for rank: 2, total batch size: 256
+Epoch 0 results: {'R1': 0.0002704790157444328, 'R5': 0.0013638210648327736, 'R10': 0.002752702485756884, 'MR': 1671.0}
+Epoch 1, Elapsed Time: 52.052, Epoch status: 0.0000, Training loss: 6.2452, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.274, Epoch status: 0.0002, Training loss: 6.2379, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.306, Epoch status: 0.0004, Training loss: 6.2388, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.307, Epoch status: 0.0006, Training loss: 6.2444, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.268, Epoch status: 0.0008, Training loss: 6.2398, Learning rate: 0.000000
+Epoch 1, Elapsed Time: 1.291, Epoch status: 0.0010, Training loss: 6.2388, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.314, Epoch status: 0.0012, Training loss: 6.2390, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.364, Epoch status: 0.0014, Training loss: 6.2370, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.304, Epoch status: 0.0017, Training loss: 6.2303, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.326, Epoch status: 0.0019, Training loss: 6.2423, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.402, Epoch status: 0.0021, Training loss: 6.2376, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.204, Epoch status: 0.0023, Training loss: 6.2432, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.294, Epoch status: 0.0025, Training loss: 6.2463, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.374, Epoch status: 0.0027, Training loss: 6.2414, Learning rate: 0.000001
+Epoch 1, Elapsed Time: 1.316, Epoch status: 0.0029, Training loss: 6.2395, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.313, Epoch status: 0.0031, Training loss: 6.2339, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.318, Epoch status: 0.0033, Training loss: 6.2393, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.284, Epoch status: 0.0035, Training loss: 6.2359, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.338, Epoch status: 0.0037, Training loss: 6.2378, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.319, Epoch status: 0.0039, Training loss: 6.2357, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.424, Epoch status: 0.0041, Training loss: 6.2338, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.215, Epoch status: 0.0043, Training loss: 6.2366, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.314, Epoch status: 0.0045, Training loss: 6.2440, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0048, Training loss: 6.2402, Learning rate: 0.000002
+Epoch 1, Elapsed Time: 1.309, Epoch status: 0.0050, Training loss: 6.2381, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.301, Epoch status: 0.0052, Training loss: 6.2410, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.305, Epoch status: 0.0054, Training loss: 6.2414, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.348, Epoch status: 0.0056, Training loss: 6.2435, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.249, Epoch status: 0.0058, Training loss: 6.2357, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.315, Epoch status: 0.0060, Training loss: 6.2343, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.299, Epoch status: 0.0062, Training loss: 6.2402, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.295, Epoch status: 0.0064, Training loss: 6.2358, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.286, Epoch status: 0.0066, Training loss: 6.2334, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.362, Epoch status: 0.0068, Training loss: 6.2292, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.374, Epoch status: 0.0070, Training loss: 6.2411, Learning rate: 0.000003
+Epoch 1, Elapsed Time: 1.273, Epoch status: 0.0072, Training loss: 6.2333, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.287, Epoch status: 0.0074, Training loss: 6.2375, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.349, Epoch status: 0.0076, Training loss: 6.2273, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.287, Epoch status: 0.0079, Training loss: 6.2340, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.299, Epoch status: 0.0081, Training loss: 6.2418, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.301, Epoch status: 0.0083, Training loss: 6.2379, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.257, Epoch status: 0.0085, Training loss: 6.2336, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.312, Epoch status: 0.0087, Training loss: 6.2304, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.285, Epoch status: 0.0089, Training loss: 6.2360, Learning rate: 0.000004
+Epoch 1, Elapsed Time: 1.373, Epoch status: 0.0091, Training loss: 6.2355, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.401, Epoch status: 0.0093, Training loss: 6.2369, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.262, Epoch status: 0.0095, Training loss: 6.2306, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.303, Epoch status: 0.0097, Training loss: 6.2335, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.376, Epoch status: 0.0099, Training loss: 6.2327, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.305, Epoch status: 0.0101, Training loss: 6.2279, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.347, Epoch status: 0.0103, Training loss: 6.2296, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.275, Epoch status: 0.0105, Training loss: 6.2325, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.341, Epoch status: 0.0107, Training loss: 6.2203, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.294, Epoch status: 0.0110, Training loss: 6.2342, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0112, Training loss: 6.2357, Learning rate: 0.000005
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0114, Training loss: 6.2265, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.351, Epoch status: 0.0116, Training loss: 6.2371, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.356, Epoch status: 0.0118, Training loss: 6.2317, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.264, Epoch status: 0.0120, Training loss: 6.2340, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.379, Epoch status: 0.0122, Training loss: 6.2354, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.285, Epoch status: 0.0124, Training loss: 6.2291, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.259, Epoch status: 0.0126, Training loss: 6.2382, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.379, Epoch status: 0.0128, Training loss: 6.2330, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.311, Epoch status: 0.0130, Training loss: 6.2420, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.314, Epoch status: 0.0132, Training loss: 6.2325, Learning rate: 0.000006
+Epoch 1, Elapsed Time: 1.325, Epoch status: 0.0134, Training loss: 6.2333, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.318, Epoch status: 0.0136, Training loss: 6.2320, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.297, Epoch status: 0.0138, Training loss: 6.2239, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.314, Epoch status: 0.0141, Training loss: 6.2230, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.326, Epoch status: 0.0143, Training loss: 6.2215, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.370, Epoch status: 0.0145, Training loss: 6.2244, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.356, Epoch status: 0.0147, Training loss: 6.2391, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.276, Epoch status: 0.0149, Training loss: 6.2298, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.330, Epoch status: 0.0151, Training loss: 6.2245, Learning rate: 0.000007
+Epoch 1, Elapsed Time: 1.329, Epoch status: 0.0153, Training loss: 6.2346, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.375, Epoch status: 0.0155, Training loss: 6.2299, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.317, Epoch status: 0.0157, Training loss: 6.2217, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.337, Epoch status: 0.0159, Training loss: 6.2290, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.328, Epoch status: 0.0161, Training loss: 6.2230, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.309, Epoch status: 0.0163, Training loss: 6.2229, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.315, Epoch status: 0.0165, Training loss: 6.2321, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.307, Epoch status: 0.0167, Training loss: 6.2193, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.263, Epoch status: 0.0169, Training loss: 6.2302, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.399, Epoch status: 0.0172, Training loss: 6.2198, Learning rate: 0.000008
+Epoch 1, Elapsed Time: 1.306, Epoch status: 0.0174, Training loss: 6.2255, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.292, Epoch status: 0.0176, Training loss: 6.2293, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.448, Epoch status: 0.0178, Training loss: 6.2255, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.220, Epoch status: 0.0180, Training loss: 6.2293, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.361, Epoch status: 0.0182, Training loss: 6.2286, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.340, Epoch status: 0.0184, Training loss: 6.2347, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.343, Epoch status: 0.0186, Training loss: 6.2282, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.304, Epoch status: 0.0188, Training loss: 6.2332, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.298, Epoch status: 0.0190, Training loss: 6.2298, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.324, Epoch status: 0.0192, Training loss: 6.2172, Learning rate: 0.000009
+Epoch 1, Elapsed Time: 1.364, Epoch status: 0.0194, Training loss: 6.2254, Learning rate: 0.000010
+Epoch 1, Elapsed Time: 1.320, Epoch status: 0.0196, Training loss: 6.2221, Learning rate: 0.000010
+Epoch 1, Elapsed Time: 1.306, Epoch status: 0.0198, Training loss: 6.2216, Learning rate: 0.000010
+Epoch 1, Elapsed Time: 1.365, Epoch status: 0.0200, Training loss: 6.2223, Learning rate: 0.000010
+Epoch 1, Elapsed Time: 1.314, Epoch status: 0.0203, Training loss: 6.2178, Learning rate: 0.000010
