@@ -1,16 +1,17 @@
 # MIL-NCE End-to-End HowTo100M training on GPUs with PyTorch
 
 This repo contains an **unofficial** PyTorch distributed training code for the CVPR'20 paper: [End-to-End Learning of Visual Representations from Uncurated Instructional Videos](https://arxiv.org/abs/1912.06430) [1].
-The original codebase from [1] rely on Google and DeepMind internal tools as well as the usage of TPU v3 accelerators which makes it challenging to release as is.
+The original codebase from [1] relies on Google and DeepMind's internal tools as well as the usage of TPU v3 accelerators which makes it challenging to release as is.
 
 Instead, this repository is an attempt to a complete rewritting from scratch of [1] on PyTorch / ffmpeg with a reasonable number of GPUs.
 
-The training code was runned on the French public AI cluster [Jean-Zay](https://www.idris.fr/eng/) (see Acknowledgements below).
-It was specifically designed to run on a SLURM based cluster management for multi-node distributed training but can be easily modify for other cluster management system.
+The training code was run on the French public AI cluster [Jean-Zay](https://www.idris.fr/eng/) (see Acknowledgements below).
+It was specifically designed to be run on a SLURM based cluster management for multi-node distributed training but can be easily modify for any other cluster management system.
 
 This unofficial PyTorch rewritting of the paper has several minor differences such as:
-- The use of a cosine learning rate decay instead of the stepwise decay described in [1].
+- The use of a cosine learning rate decay instead of a stepwise decay described in [1].
 - There is no sharing of the batch normalization statistics across different GPUs and nodes as it is much slower to perform such operation on GPUs than TPUs.
+- The use of slightly different spatio-temporal training video resolution of the input video clips.
 
 If you only plan to reuse the pretrained S3D model from [1], instead please visit the following [repo](https://github.com/antoine77340/S3D_HowTo100M)
 If you use this code, we would appreciate if you could both cite [1] and [2] :).
@@ -42,12 +43,12 @@ wget https://www.rocq.inria.fr/cluster-willow/amiech/howto100m/howto100m_caption
 ```
 
 Finally the preprocessed HowTo100M videos (12Tb in total) can be downloaded by filling this Google form: https://forms.gle/hztrfnFQUJWBtiki8.
-We advise you save the HowTo100M videos as well as the caption files in a fast access disk such as SSDs disks to significantly speedup the training.
+We advise you save the HowTo100M videos as well as the caption files on fast access disks such as SSDs disks to significantly speedup the training.
 
 ## Training MIL-NCE on HowTo100M
 
-The following command trains the model on a single node, uses all of its GPU and checkpoints the model in the directory checkpoint/milnce, the log are written in the *log* directory.
-Do not forget to replace *path_to_howto_csv* by the path to the HowTo100M csv cation files and *path_to_howto_videos* to the path where the HowTo100M videos were downloaded.
+The following command trains the S3D model on a single node, uses all of its GPU and checkpoints the model in the directory checkpoint/milnce, the log are written in the *log* directory.
+Do not forget to replace *path_to_howto_csv* by the path to the HowTo100M csv caption files and *path_to_howto_videos* to the path where the HowTo100M videos were downloaded.
 
 ```sh
 python main_distributed.py --n_display=1 \
@@ -57,11 +58,10 @@ python main_distributed.py --n_display=1 \
        --warmup_steps=10000 --epochs=300 --caption_root=path_to_howto_csv --video_path=path_to_howto_videos
 ```
 
-
 You can also monitor the evaluation on the zero-shot YouCook2 retrieval task by specifying the argument --evaluate as well as *--eval_video_root=path_to_youcook2_video*
 
 - Note 1: The batch size value set here is the total batch size for the node, so if batch size is 256 and there are 4 GPUs, the batch size for each GPU will be 64.
-- Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is the number of different video in HowTo100M. It is not the same as the number of different training video clips as they are more than 100M clips. 
+- Note 2: An epoch here is equivalent of processing 1238911 video-text training samples, which is the number of different videos in HowTo100M. It is not the same as the number of different training video clips as there are more than 100M clips. 
 - Note 3: The training code should be distributed over multiple tasks with SLURM for distributed training.
 
 ## Linear evaluation of representation on HMDB-51 action recognition dataset 
@@ -90,7 +90,7 @@ This table compares the results of the linear evaluation of the representation o
 <th valign="bottom">Implementation</th>
 <th valign="bottom">Epochs</th>
 <th valign="bottom">Total batch size</th>
-<th valign="bottom">Accelarator</th>
+<th valign="bottom">Accelerator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
 <th valign="bottom">Top-1 accuracy</th>
@@ -157,7 +157,7 @@ This table compares the retrieval results with the original implementation and t
 <th valign="bottom">Implementation</th>
 <th valign="bottom">Epochs</th>
 <th valign="bottom">Total batch size</th>
-<th valign="bottom">Accelarator</th>
+<th valign="bottom">Accelerator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
 <th valign="bottom">R@1</th>
@@ -227,7 +227,7 @@ python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_tes
 <th valign="bottom">Implementation</th>
 <th valign="bottom">Epochs</th>
 <th valign="bottom">Total batch size</th>
-<th valign="bottom">Accelarator</th>
+<th valign="bottom">Accelerator</th>
 <th valign="bottom">CPU cores</th>
 <th valign="bottom">Training input size</th>
 <th valign="bottom">R@1</th>
