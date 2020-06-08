@@ -99,7 +99,7 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">64 x N.A.</td>
 <td align="center">32 frames at 200x200</td>
 <td align="center">54.8</td>
 </tr>
@@ -107,9 +107,9 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">4 x N.A.</td>
 <td align="center">16 frames at 200x200</td>
-<td align="center">?</td>
+<td align="center">54.2</td>
 </tr>
 <tr><td align="left">This implementation</td>
 <td align="center">150</td>
@@ -169,7 +169,7 @@ This table compares the retrieval results with the original implementation and t
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">64 x N.A.</td>
 <td align="center">32 frames at 200x200</td>
 <td align="center">9.9</td>
 <td align="center">24.0</td>
@@ -180,12 +180,12 @@ This table compares the retrieval results with the original implementation and t
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">4 x N.A.</td>
 <td align="center">16 frames at 200x200</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
+<td align="center">8.6</td>
+<td align="center">21.5</td>
+<td align="center">28.6</td>
+<td align="center">36</td>
 </tr>
 <tr><td align="left">This implementation</td>
 <td align="center">150</td>
@@ -221,6 +221,11 @@ python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_tes
         --eval_video_root=path_to_the_youcook_videos --pretrain_cnn_path=the_path_to_the_checkpoint
 ```
 
+This table compares the retrieval results with the original implementation and this one under various number of training epoch and training batch size.
+Note that as opposed to MSR-VTT and HMDB-51, we were not able to download same amount of YouCook2 cooking videos and thus the evaluation between the DeepMind implementation and this PyTorch 
+implementation are evaluated on a slightly different number of validation videos (The DeepMind evaluation has slightly less validation videos).
+
+
 <table><tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
@@ -239,7 +244,7 @@ python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_tes
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">64 x N.A.</td>
 <td align="center">32 frames at 200x200</td>
 <td align="center">15.1</td>
 <td align="center">38.0</td>
@@ -250,12 +255,12 @@ python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_tes
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
-<td align="center">??</td>
+<td align="center">4 x N.A.</td>
 <td align="center">16 frames at 200x200</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
+<td align="center">8.2</td>
+<td align="center">24.6</td>
+<td align="center">36.2</td>
+<td align="center">23</td>
 </tr>
 <tr><td align="left">This implementation</td>
 <td align="center">150</td>
