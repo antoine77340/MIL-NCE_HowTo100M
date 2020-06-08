@@ -3,18 +3,18 @@
 This repo contains an **unofficial** PyTorch distributed training code for the CVPR'20 paper: [End-to-End Learning of Visual Representations from Uncurated Instructional Videos](https://arxiv.org/abs/1912.06430) [1].
 The original codebase from [1] relies on Google and DeepMind's internal tools as well as the usage of TPU v3 accelerators which makes it challenging to release as is.
 
-Instead, this repository is an attempt to a complete rewritting from scratch of [1] on PyTorch / ffmpeg with a reasonable number of GPUs.
+Instead, this repository provides an implementation of [1] using PyTorch / ffmpeg with a reasonable number of GPUs.
 
 The training code was run on the French public AI cluster [Jean-Zay](https://www.idris.fr/eng/) (see Acknowledgements below).
 It was specifically designed to be run on a SLURM based cluster management for multi-node distributed training but can be easily modify for any other cluster management system.
 
-This unofficial PyTorch rewritting of the paper has several minor differences such as:
+This unofficial PyTorch implementation of the paper has several minor differences such as:
 - The use of a cosine learning rate decay instead of a stepwise decay described in [1].
 - There is no sharing of the batch normalization statistics across different GPUs and nodes as it is much slower to perform such operation on GPUs than TPUs.
 - The use of slightly different spatio-temporal training video resolution of the input video clips.
 
 If you only plan to reuse the pretrained S3D model from [1], instead please visit the following [repo](https://github.com/antoine77340/S3D_HowTo100M)
-If you use this code, we would appreciate if you could both cite [1] and [2] :).
+If you use this code, we would appreciate if you could both cite [1] and [2].
 
 ## Requirements
 
