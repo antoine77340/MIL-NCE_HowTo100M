@@ -125,7 +125,7 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">4 x 4 Tesla V100 32Gb</td>
 <td align="center">4 x 40</td>
 <td align="center">16 frames at 224x224</td>
-<td align="center">?</td>
+<td align="center">54.3</td>
 </tr>
 </tbody></table>
 
@@ -204,10 +204,10 @@ This table compares the retrieval results with the original implementation and t
 <td align="center">4 x 4 Tesla V100 32Gb</td>
 <td align="center">4 x 40</td>
 <td align="center">16 frames at 224x224</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
+<td align="center">8.2</td>
+<td align="center">21.5</td>
+<td align="center">29.5</td>
+<td align="center">40</td>
 </tr>
 </tbody></table>
 
@@ -279,10 +279,10 @@ implementation are evaluated on a slightly different number of validation videos
 <td align="center">4 x 4 Tesla V100 32Gb</td>
 <td align="center">4 x 40</td>
 <td align="center">16 frames at 224x224</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
-<td align="center">?</td>
+<td align="center">8.8</td>
+<td align="center">24.3</td>
+<td align="center">34.6</td>
+<td align="center">23</td>
 </tr>
 </tbody></table>
 
@@ -314,7 +314,7 @@ Bibtex:
 }
 ```
 
-# Acknowledgements
+## Acknowledgements
 
 This work was granted access to the HPC resources of IDRIS under the allocation 2020-AD011011325 made by GENCI.
 
