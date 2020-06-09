@@ -289,14 +289,14 @@ implementation are evaluated on a slightly different number of validation videos
 ## References 
 
 [1] A. Miech, J.-B. Alayrac, L. Smaira, I. Laptev, J. Sivic and A. Zisserman,
-End-to-End Learning of Visual Representations from Uncurated Instructional Videos.
-CVPR 2020
-https://arxiv.org/abs/1912.06430
+[End-to-End Learning of Visual Representations from Uncurated Instructional Videos](https://arxiv.org/abs/1912.06430)
+
+Presented at CVPR 2020
 
 [2] A. Miech, D. Zhukov, J.-B. Alayrac, M. Tapaswi, I. Laptev and J. Sivic, 
-HowTo100M: Learning a Text-Video Embedding by Watching Hundred Million Narrated Video Clips.
-ICCV 2019
-https://arxiv.org/abs/1906.03327
+[HowTo100M: Learning a Text-Video Embedding by Watching Hundred Million Narrated Video Clips](https://arxiv.org/abs/1906.03327)
+
+Presented at ICCV 2019
 
 Bibtex:
 
