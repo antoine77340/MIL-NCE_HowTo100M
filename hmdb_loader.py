@@ -79,7 +79,7 @@ class HMDB_DataLoader(Dataset):
         for i, s in enumerate(start_ind):
             output[i] = video[:, s:s+self.num_frames] 
         if flip:
-            video = th.cat((output, output[:,:,:,:,::-1]), dim=0) 
+            video = th.cat((output, th.flip(output, [4])), dim=0) 
         return output
 
     def __getitem__(self, idx):
