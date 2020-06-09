@@ -1,6 +1,6 @@
 # MIL-NCE End-to-End HowTo100M training on GPUs with PyTorch
 
-This repo contains an **unofficial** PyTorch distributed training code for the CVPR'20 paper: [End-to-End Learning of Visual Representations from Uncurated Instructional Videos](https://arxiv.org/abs/1912.06430) [1].
+This repo contains an open source PyTorch distributed training code for the CVPR'20 paper: [End-to-End Learning of Visual Representations from Uncurated Instructional Videos](https://arxiv.org/abs/1912.06430) [1].
 The original codebase from [1] relies on Google and DeepMind's internal tools as well as the usage of TPU v3 accelerators which makes it challenging to release as is.
 
 Instead, this repository provides an implementation of [1] using PyTorch / ffmpeg with a reasonable number of GPUs.
@@ -8,7 +8,7 @@ Instead, this repository provides an implementation of [1] using PyTorch / ffmpe
 The training code was run on the French public AI cluster [Jean-Zay](https://www.idris.fr/eng/) (see Acknowledgements below).
 It was specifically designed to be run on a SLURM based cluster management for multi-node distributed training but can be easily modify for any other cluster management system.
 
-This unofficial PyTorch implementation of the paper has several minor differences such as:
+This open source PyTorch implementation of the paper has several minor differences such as:
 - The use of a cosine learning rate decay instead of a stepwise decay described in [1].
 - There is no sharing of the batch normalization statistics across different GPUs and nodes as it is much slower to perform such operation on GPUs than TPUs.
 - The use of slightly different spatio-temporal training video resolution of the input video clips.
@@ -95,7 +95,7 @@ This table compares the results of the linear evaluation of the representation o
 <th valign="bottom">Training input size</th>
 <th valign="bottom">Top-1 accuracy</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -103,7 +103,7 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">32 frames at 200x200</td>
 <td align="center">54.8</td>
 </tr>
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
@@ -165,7 +165,7 @@ This table compares the retrieval results with the original implementation and t
 <th valign="bottom">R@10</th>
 <th valign="bottom">Median Rank</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -176,7 +176,7 @@ This table compares the retrieval results with the original implementation and t
 <td align="center">32.4</td>
 <td align="center">29.5</td>
 </tr>
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
@@ -240,7 +240,7 @@ implementation are evaluated on a slightly different number of validation videos
 <th valign="bottom">R@10</th>
 <th valign="bottom">Median Rank</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -251,7 +251,7 @@ implementation are evaluated on a slightly different number of validation videos
 <td align="center">51.2</td>
 <td align="center">10</td>
 </tr>
-<tr><td align="left">Original DeepMind</td>
+<tr><td align="left">Original [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
@@ -290,10 +290,12 @@ implementation are evaluated on a slightly different number of validation videos
 
 [1] A. Miech, J.-B. Alayrac, L. Smaira, I. Laptev, J. Sivic and A. Zisserman,
 End-to-End Learning of Visual Representations from Uncurated Instructional Videos.
+CVPR 2020
 https://arxiv.org/abs/1912.06430
 
 [2] A. Miech, D. Zhukov, J.-B. Alayrac, M. Tapaswi, I. Laptev and J. Sivic, 
 HowTo100M: Learning a Text-Video Embedding by Watching Hundred Million Narrated Video Clips.
+ICCV 2019
 https://arxiv.org/abs/1906.03327
 
 Bibtex:
