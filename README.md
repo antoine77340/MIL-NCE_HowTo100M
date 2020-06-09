@@ -95,7 +95,7 @@ This table compares the results of the linear evaluation of the representation o
 <th valign="bottom">Training input size</th>
 <th valign="bottom">Top-1 accuracy</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -103,7 +103,7 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">32 frames at 200x200</td>
 <td align="center">54.8</td>
 </tr>
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
@@ -165,7 +165,7 @@ This table compares the retrieval results with the original implementation and t
 <th valign="bottom">R@10</th>
 <th valign="bottom">Median Rank</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -176,7 +176,7 @@ This table compares the retrieval results with the original implementation and t
 <td align="center">32.4</td>
 <td align="center">29.5</td>
 </tr>
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
@@ -240,7 +240,7 @@ implementation are evaluated on a slightly different number of validation videos
 <th valign="bottom">R@10</th>
 <th valign="bottom">Median Rank</th>
 <!-- TABLE BODY -->
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">2645</td>
 <td align="center">8192</td>
 <td align="center">64 x Cloud TPU v3 128Gb</td>
@@ -251,7 +251,7 @@ implementation are evaluated on a slightly different number of validation videos
 <td align="center">51.2</td>
 <td align="center">10</td>
 </tr>
-<tr><td align="left">Original [1]</td>
+<tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">206</td>
 <td align="center">512</td>
 <td align="center">4 x Cloud TPU v3 128Gb</td>
