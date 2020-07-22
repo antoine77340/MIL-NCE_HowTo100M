@@ -18,14 +18,20 @@ from sklearn.svm import LinearSVC
 def main():
     args = get_args()
     assert args.eval_video_root != ''
-    model = s3dg.S3D(
-        args.num_class, space_to_depth=False, word2vec_path=''
-    )
-    model = torch.nn.DataParallel(model)
     checkpoint_path = args.pretrain_cnn_path
     print("=> loading checkpoint '{}'".format(checkpoint_path))
     checkpoint = torch.load(checkpoint_path)
-    model.load_state_dict(checkpoint["state_dict"])
+    if "state_dict" in checkpoint:
+        model = s3dg.S3D(
+            args.num_class, space_to_depth=False, word2vec_path=args.word2vec_path)
+        model = torch.nn.DataParallel(model)
+        model.load_state_dict(checkpoint["state_dict"])
+    else: # load pre-trained model from https://github.com/antoine77340/S3D_HowTo100M
+        model = s3dg.S3D(
+            args.num_class, space_to_depth=True, word2vec_path=args.word2vec_path)
+        model = torch.nn.DataParallel(model)
+        checkpoint_module = {'module.' + k:v for k,v in checkpoint.items()}
+        model.load_state_dict(checkpoint_module)
     model.eval()
     model.cuda()
    
@@ -57,7 +63,7 @@ def evaluate(train_loader, model, args):
     split2 = []
     split3 = []
     with torch.no_grad():
-        for i_batch, data in tqdm(enumerate(train_loader)):
+        for i_batch, data in enumerate(tqdm(train_loader)):
             split1.append(data['split1'])
             split2.append(data['split2'])
             split3.append(data['split3'])

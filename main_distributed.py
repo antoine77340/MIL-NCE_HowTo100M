@@ -157,6 +157,8 @@ def main_worker(gpu, ngpus_per_node, args):
 
     scheduler = get_cosine_schedule_with_warmup(optimizer, args.warmup_steps, len(train_loader) * args.epochs)
     checkpoint_dir = os.path.join(os.path.dirname(__file__), 'checkpoint', args.checkpoint_dir)
+    if args.checkpoint_dir != '' and not(os.path.isdir(checkpoint_dir)) and args.rank == 0:
+        os.mkdir(checkpoint_dir)
     # optionally resume from a checkpoint
     if args.resume:
         checkpoint_path = get_last_checkpoint(checkpoint_dir)
@@ -228,8 +230,9 @@ def TrainOneBatch(model, opt, scheduler, data, loss_fun, args):
     opt.zero_grad()
     with torch.set_grad_enabled(True):
         video_embd, text_embd = model(video, text)
-        video_embd = allgather(video_embd, args)
-        text_embd = allgather(text_embd, args)
+        if args.distributed:
+            video_embd = allgather(video_embd, args)
+            text_embd = allgather(text_embd, args)
         loss = loss_fun(video_embd, text_embd)
     loss.backward()
     opt.step()

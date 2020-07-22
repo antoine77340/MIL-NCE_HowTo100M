@@ -36,7 +36,7 @@ class HMDB_DataLoader(Dataset):
         self.num_clip = num_clip
         self.crop_only = crop_only
         self.center_crop = center_crop
-        self.with_flip = flip
+        self.with_flip = with_flip
 
     def __len__(self):
         return len(self.data)
