@@ -101,7 +101,7 @@ This table compares the results of the linear evaluation of the representation o
 <td align="center">64 x Cloud TPU v3 128Gb</td>
 <td align="center">64 x N.A.</td>
 <td align="center">32 frames at 200x200</td>
-<td align="center">54.8</td>
+<td align="center">53.1</td>
 </tr>
 <tr><td align="left">TPU Tensorflow [1]</td>
 <td align="center">206</td>
