@@ -67,7 +67,8 @@ class HT100M_DataLoader(Dataset):
             aw, ah = random.uniform(0, 1), random.uniform(0, 1)
         if self.crop_only:
             cmd = (
-                cmd.crop('(iw - {})*{}'.format(self.size, aw),
+                cmd.filter('scale', 'if(gt(ih, iw), 256, -1)', 'if(gt(ih, iw), -1, 256)')
+                   .crop('(iw - {})*{}'.format(self.size, aw),
                          '(ih - {})*{}'.format(self.size, ah),
                          str(self.size), str(self.size))
             )
