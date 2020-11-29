@@ -15,9 +15,10 @@ import torch.utils.data
 import torch.utils.data.distributed
 
 import s3dg
+import numodel
 from args import get_args
 from video_loader import HT100M_DataLoader
-from loss import MILNCELoss
+from loss import MILNCELoss, PMILNCELoss
 
 from metrics import compute_metrics
 from youcook_loader import Youcook_DataLoader
@@ -51,7 +52,7 @@ def main():
         )
     else:
         raise NotImplementedError
- 
+
     args.distributed = args.world_size > 1 or args.multiprocessing_distributed
     ngpus_per_node = torch.cuda.device_count()
     if args.multiprocessing_distributed:
@@ -73,9 +74,14 @@ def main_worker(gpu, ngpus_per_node, args):
             rank=args.rank,
         )
     # create model
+    model = numodel.Model(
+        args.num_class, space_to_depth=False, word2vec_path=args.word2vec_path, init=args.weight_init,
+    )
+    ''' #tag#
     model = s3dg.S3D(
         args.num_class, space_to_depth=False, word2vec_path=args.word2vec_path, init=args.weight_init,
     )
+    '''
 
     if args.pretrain_cnn_path:
         net_data = torch.load(args.pretrain_cnn_path)
@@ -148,7 +154,10 @@ def main_worker(gpu, ngpus_per_node, args):
     )
 
     # define loss function (criterion) and optimizer
+    criterion = PMILNCELoss()
+    ''' #tag#
     criterion = MILNCELoss()
+    '''
 
     if args.optimizer == 'adam':
         optimizer = torch.optim.Adam(model.parameters(), args.lr)
@@ -175,7 +184,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     if args.cudnn_benchmark:
         cudnn.benchmark = True
-    total_batch_size = args.world_size * args.batch_size 
+    total_batch_size = args.world_size * args.batch_size
     log(
         "Starting training loop for rank: {}, total batch size: {}".format(
             args.rank, total_batch_size
@@ -243,7 +252,7 @@ def evaluate(test_loader, model, epoch, args, dataset_name):
     all_txt_embd = []
     all_video_embd = []
     model.eval()
-    if args.rank == 0:  
+    if args.rank == 0:
         log('Evaluating on {}'.format(dataset_name), args)
     with torch.no_grad():
         for i_batch, data in enumerate(test_loader):
@@ -271,7 +280,7 @@ def evaluate(test_loader, model, epoch, args, dataset_name):
 def save_checkpoint(state, checkpoint_dir, epoch, n_ckpt=10):
     torch.save(state, os.path.join(checkpoint_dir, "epoch{:0>4d}.pth.tar".format(epoch)))
     if epoch - n_ckpt >= 0:
-        oldest_ckpt = os.path.join(checkpoint_dir, "epoch{:0>4d}.pth.tar".format(epoch - n_ckpt)) 
+        oldest_ckpt = os.path.join(checkpoint_dir, "epoch{:0>4d}.pth.tar".format(epoch - n_ckpt))
         if os.path.isfile(oldest_ckpt):
             os.remove(oldest_ckpt)
 
