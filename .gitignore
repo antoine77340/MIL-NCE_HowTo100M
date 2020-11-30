@@ -1,1 +1,62 @@
+################################################################################
+# Project Specific Ignores
+################################################################################
 data
+howto100m_captions.zip
+word2vec.zip
+
+
+################################################################################
+# General Ignores
+################################################################################
+## byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.DS_store
+*~
+\#*
+.\#*
+
+## C extensions
+*.so
+
+## installer logs
+src
+pip-log.txt
+pip-delete-this-directory.txt
+
+## dist / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+## environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+## editor outputs
+Icon[
+]
+*.vscode
