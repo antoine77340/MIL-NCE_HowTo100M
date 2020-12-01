@@ -45,20 +45,23 @@ def main():
     print(os.environ["SLURM_JOB_ID"])
     print(os.environ["SLURM_PROCID"])
     print(os.environ["SLURM_NTASKS"])
-
+    '''
     if args.world_size == -1 and "SLURM_NTASKS" in os.environ:
-        args.world_size = int(os.environ["SLURM_NTASKS"])
-        args.rank = int(os.environ["SLURM_PROCID"])
-        jobid = os.environ["SLURM_JOB_ID"]
-        hostfile = "dist_url." + jobid + ".txt"
-        args.dist_url = "file://{}.{}".format(os.path.realpath(args.dist_file), jobid)
-        print(
-            "dist-url:{} at PROCID {} / {}".format(
-                args.dist_url, args.rank, args.world_size
-            )
+    '''
+    # args.world_size = int(os.environ["SLURM_NTASKS"])
+    args.rank = int(os.environ["SLURM_PROCID"])
+    jobid = os.environ["SLURM_JOB_ID"]
+    hostfile = "dist_url." + jobid + ".txt"
+    args.dist_url = "file://{}.{}".format(os.path.realpath(args.dist_file), jobid)
+    print(
+        "dist-url:{} at PROCID {} / {}".format(
+            args.dist_url, args.rank, args.world_size
         )
+    )
+    '''
     else:
         raise NotImplementedError
+    '''
 
     args.distributed = args.world_size > 1 or args.multiprocessing_distributed
     ngpus_per_node = torch.cuda.device_count()
