@@ -43,21 +43,19 @@ def main():
     print("SLURM exists: ", "SLURM_NPROCS" in os.environ)
     print("SLURM exists: ", "SLURM_NTASKS" in os.environ)
     print(os.environ["SLURM_JOB_ID"])
-    print(os.environ["SLURM_PROCID"])
-    print(os.environ["SLURM_NTASKS"])
-    '''
+    # print(os.environ["SLURM_PROCID"])
+    # print(os.environ["SLURM_NTASKS"])
+
     if args.world_size == -1 and "SLURM_NTASKS" in os.environ:
-    '''
-    # args.world_size = int(os.environ["SLURM_NTASKS"])
-    args.rank = int(os.environ["SLURM_PROCID"])
-    jobid = os.environ["SLURM_JOB_ID"]
-    hostfile = "dist_url." + jobid + ".txt"
-    args.dist_url = "file://{}.{}".format(os.path.realpath(args.dist_file), jobid)
-    print(
-        "dist-url:{} at PROCID {} / {}".format(
-            args.dist_url, args.rank, args.world_size
+        args.rank = int(os.environ["SLURM_PROCID"])
+        jobid = os.environ["SLURM_JOB_ID"]
+        hostfile = "dist_url." + jobid + ".txt"
+        args.dist_url = "file://{}.{}".format(os.path.realpath(args.dist_file), jobid)
+        print(
+            "dist-url:{} at PROCID {} / {}".format(
+                args.dist_url, args.rank, args.world_size
+            )
         )
-    )
     '''
     else:
         raise NotImplementedError
@@ -92,6 +90,13 @@ def main_worker(gpu, ngpus_per_node, args):
         args.num_class, space_to_depth=False, word2vec_path=args.word2vec_path, init=args.weight_init,
     )
     '''
+    USE_CUDA=torch.cuda.is_available()
+    if USE_CUDA:
+        DEVICE=torch.device('cuda:0')
+        args.gpu=0
+
+    print("CUDA:", USE_CUDA)
+    print("Device:", DEVICE)
 
     if args.pretrain_cnn_path:
         net_data = torch.load(args.pretrain_cnn_path)
@@ -213,6 +218,7 @@ def main_worker(gpu, ngpus_per_node, args):
         ), args
     )
     for epoch in range(args.start_epoch, args.epochs):
+        print("Hello! In epoch!")
         if args.distributed:
             train_sampler.set_epoch(epoch)
         if epoch % max(1, total_batch_size // 512) == 0 and args.evaluate:
@@ -236,6 +242,7 @@ def train(train_loader, model, criterion, optimizer, scheduler, epoch, dataset, 
     for i_batch, sample_batch in enumerate(train_loader):
         s_step = time.time()
         batch_loss = TrainOneBatch(model, optimizer, scheduler, sample_batch, criterion, args)
+        print("calculated the loss")
         d_step = time.time() - s_step
         running_loss += batch_loss
         if (i_batch + 1) % args.n_display == 0 and args.verbose and args.rank == 0:
