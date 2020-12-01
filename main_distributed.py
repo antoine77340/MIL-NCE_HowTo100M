@@ -104,6 +104,7 @@ def main_worker(gpu, ngpus_per_node, args):
         model = torch.nn.DataParallel(model).cuda()
 
     # Data loading code
+    '''
     train_dataset = Youcook_DataLoader(
         data=os.path.join(os.path.dirname(__file__), 'csv/validation_youcook.csv'),
         num_clip=args.num_windows_test,
@@ -128,7 +129,6 @@ def main_worker(gpu, ngpus_per_node, args):
         random_left_right_flip=args.random_flip,
         num_candidates=args.num_candidates,
     )
-    '''
     # Test data loading code
     test_dataset = Youcook_DataLoader(
         data=os.path.join(os.path.dirname(__file__), 'csv/validation_youcook.csv'),
