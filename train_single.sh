@@ -4,8 +4,8 @@ python3 main_distributed.py --n_display=1 \
        --batch_size=256 \
        --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory \
        --checkpoint_dir=pmilnce --num_candidates=$2 --lr=0.001 \
-       --warmup_steps=10000 --epochs=1 \
-       --seed=$1 \
+       --warmup_steps=10000 --epochs=4 \
+       --seed=$1 --world-size=1 --rank=0\
        --caption_root=data/small_howto100m_videos_captions \
        --train_csv=csv/small_howto100m_videos.csv --video_path=data/training \
        --word2vec_path $PWD/data/word2vec.pth
