@@ -11,9 +11,6 @@ python3 main_distributed.py --n_display=1 \
        --eval_video_root=data --evaluate \
        --word2vec_path $PWD/data/word2vec.pth
 
-echo $PWD/data/word2vec.pth
-
-
 # python main_distributed.py --verbose --n_display=1 \
 #       --multiprocessing-distributed --batch_size=256 \
 #       --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory \

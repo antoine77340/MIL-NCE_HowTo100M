@@ -42,7 +42,7 @@ def main():
     print("node num is: ", args.world_size)
     print("SLURM exists: ", "SLURM_NPROCS" in os.environ)
     print("SLURM exists: ", "SLURM_NTASKS" in os.environ)
-    print(os.environ["SLURM_JOB_ID"])
+    # print(os.environ["SLURM_JOB_ID"])
     # print(os.environ["SLURM_PROCID"])
     # print(os.environ["SLURM_NTASKS"])
 
