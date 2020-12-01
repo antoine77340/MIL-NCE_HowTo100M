@@ -39,9 +39,9 @@ def main():
         random.seed(args.seed)
         torch.manual_seed(args.seed)
 
-    print("node num is: ", args.world_size)
-    print("SLURM exists: ", "SLURM_NTASKS" in os.environ)
-    print(os.environ["SLURM_JOB_ID"])
+    # print("node num is: ", args.world_size)
+    # print("SLURM exists: ", "SLURM_NTASKS" in os.environ)
+    # print(os.environ["SLURM_JOB_ID"])
 
     if args.world_size == -1 and "SLURM_NTASKS" in os.environ:
         args.world_size = int(os.environ["SLURM_NTASKS"])

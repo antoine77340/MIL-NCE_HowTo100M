@@ -15,7 +15,7 @@ for CANDIDATE in $CAND_LST;
     name="TRAIN-seed_$SEED"
     OUT_FILE="$OUT_HEAD$name.txt"
     ERR_FILE="$ERR_HEAD$name.txt"
-    sbatch -J $name -o $OUT_FILE  -e $ERR_FILE -t 4:00:00 -p gpu --gres=gpu:$NUM_GRU_NODE --mem=40G train_single.sh $SEED $CANDIDATE $NUM_GRU_NODE
+    sbatch -J $name -o $OUT_FILE  -e $ERR_FILE -t 4:00:00 -p -n 4 gpu --gres=gpu:$NUM_GRU_NODE --mem=16G train_single.sh $SEED $CANDIDATE # $NUM_GRU_NODE
     echo "Done."
     exit
     done
