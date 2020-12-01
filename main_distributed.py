@@ -40,12 +40,13 @@ def main():
         torch.manual_seed(args.seed)
 
     print("node num is: ", args.world_size)
-    print("SLURM exists: ", "SLURM_NPROCS" in os.environ)
+    print("SLURM exists: ", "SLURM_NTASKS" in os.environ)
+    print(os.environ["SLURM_JOB_ID"])
 
-    if args.world_size == -1 and "SLURM_NPROCS" in os.environ:
-        args.world_size = int(os.environ["SLURM_NPROCS"])
+    if args.world_size == -1 and "SLURM_NTASKS" in os.environ:
+        args.world_size = int(os.environ["SLURM_NTASKS"])
         args.rank = int(os.environ["SLURM_PROCID"])
-        jobid = os.environ["SLURM_JOBID"]
+        jobid = os.environ["SLURM_JOB_ID"]
         hostfile = "dist_url." + jobid + ".txt"
         args.dist_url = "file://{}.{}".format(os.path.realpath(args.dist_file), jobid)
         print(
