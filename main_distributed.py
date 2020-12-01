@@ -39,6 +39,9 @@ def main():
         random.seed(args.seed)
         torch.manual_seed(args.seed)
 
+    print("node num is: ", args.world_size)
+    print("SLURM exists: ", "SLURM_NPROCS" in os.environ)
+
     if args.world_size == -1 and "SLURM_NPROCS" in os.environ:
         args.world_size = int(os.environ["SLURM_NPROCS"])
         args.rank = int(os.environ["SLURM_PROCID"])
