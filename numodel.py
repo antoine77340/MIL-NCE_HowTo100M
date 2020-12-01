@@ -22,7 +22,7 @@ class Model(nn.Module):
         self.text_module = Sentence_Embedding(
                                num_classes,
                                os.path.join(os.path.dirname(__file__), token_to_word_path),
-                               word2vec_path=os.path.join(os.path.dirname(__file__), word2vec_path))
+                               word2vec_path=word2vec_path) # os.path.join(os.path.dirname(__file__), word2vec_path))
 
     def forward(self, video, text, mode='all', mixed5c=False):
         video, text = self.preprocess(video, text)
