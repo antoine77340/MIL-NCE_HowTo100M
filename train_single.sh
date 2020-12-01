@@ -7,7 +7,7 @@ python3 main_distributed.py --n_display=1 \
        --warmup_steps=10000 --epochs=1 \
        --seed=$1 \
        --caption_root=data/small_howto100m_videos_captions \
-       --train_csv=small_howto100m_videos.csv --video_path=data/training \
+       --train_csv=csv/small_howto100m_videos.csv --video_path=data/training \
        --eval_video_root=data --evaluate \
        --word2vec_path $PWD/data/word2vec.pth
 
