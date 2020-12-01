@@ -247,6 +247,7 @@ def train(train_loader, model, criterion, optimizer, scheduler, epoch, dataset, 
         d_step = time.time() - s_step
         running_loss += batch_loss
         if (i_batch + 1) % args.n_display == 0 and args.verbose and args.rank == 0:
+            print(I am loggin!)
             d = time.time() - s
             log(
                 "Epoch %d, Elapsed Time: %.3f, Epoch status: %.4f, Training loss: %.4f, Learning rate: %.6f"
