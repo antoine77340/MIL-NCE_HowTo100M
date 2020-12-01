@@ -97,6 +97,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     print("CUDA:", USE_CUDA)
     print("Device:", DEVICE)
+    print("os log paths are from:", os.path.dirname(__file__))
 
     if args.pretrain_cnn_path:
         net_data = torch.load(args.pretrain_cnn_path)
