@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 main_distributed.py --verbose --n_display=1 \
+python3 main_distributed.py --n_display=1 \
        --multiprocessing-distributed --batch_size=256 \
        --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory \
        --checkpoint_dir=pmilnce --num_candidates=$2 --lr=0.001 \
