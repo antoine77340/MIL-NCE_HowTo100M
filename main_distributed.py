@@ -182,10 +182,10 @@ def main_worker(gpu, ngpus_per_node, args):
     )
 
     # define loss function (criterion) and optimizer
-    criterion = PMILNCELoss()
+    # criterion = PMILNCELoss()
     ''' #tag#
-    criterion = MILNCELoss()
     '''
+    criterion = MILNCELoss()
 
     if args.optimizer == 'adam':
         optimizer = torch.optim.Adam(model.parameters(), args.lr)
