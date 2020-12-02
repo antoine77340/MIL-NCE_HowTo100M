@@ -6,10 +6,10 @@ python3 main_distributed.py --n_display=1 \
        --checkpoint_dir=pmilnce --num_candidates=$2 --lr=0.001 \
        --warmup_steps=10000 --epochs=4 \
        --seed=$1 --world-size=1 --rank=0\
-       --caption_root=data/small_howto100m_videos_captions \
-       --train_csv=csv/small_howto100m_videos.csv --video_path=data/training \
+       --caption_root=data/small_train_captions \
+       --train_csv=csv/small_train_videos.csv --video_path=data/training \
        --word2vec_path $PWD/data/word2vec.pth
-       # --eval_video_root=data --evaluate \
+       --eval_video_root=data/small_val_videos --evaluate \
 
 # python main_distributed.py --verbose --n_display=1 \
 #       --multiprocessing-distributed --batch_size=256 \

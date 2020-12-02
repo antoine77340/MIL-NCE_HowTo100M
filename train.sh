@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # export SEED_LST=$"42 68 99"
 export OUT_HEAD="job_outputs/out-"
 export ERR_HEAD="job_outputs/err-"

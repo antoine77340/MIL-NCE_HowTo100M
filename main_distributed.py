@@ -147,7 +147,7 @@ def main_worker(gpu, ngpus_per_node, args):
     )
     # Test data loading code
     test_dataset = Youcook_DataLoader(
-        data=os.path.join(os.path.dirname(__file__), 'csv/validation_youcook.csv'),
+        data=os.path.join(os.path.dirname(__file__), 'data/small_val_captions.csv'),
         num_clip=args.num_windows_test,
         video_root=args.eval_video_root,
         fps=args.fps,
