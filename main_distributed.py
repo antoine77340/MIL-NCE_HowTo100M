@@ -294,8 +294,9 @@ def evaluate(test_loader, model, epoch, args, dataset_name):
             video_embd, text_embd = model(video, text)
             video_embd = video_embd.view(text_embd.shape[0], args.num_windows_test, text_embd.shape[1])
             video_embd = video_embd.mean(dim=1)
-            video_embd = allgather(video_embd, args)
-            text_embd = allgather(text_embd, args)
+            if args.distributed:
+                video_embd = allgather(video_embd, args)
+                text_embd = allgather(text_embd, args)
             if args.rank == 0:
                 text_embd = text_embd.cpu().numpy()
                 video_embd = video_embd.cpu().numpy()
