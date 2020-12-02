@@ -4,8 +4,6 @@
 data/word2vec.pth
 data/validation.zip
 data/small_validation.zip
-data/small_howto100m_videos.txt
-data/small_howto100m_noend.txt
 data/small_data.zip
 data/extract_videos.sh
 data/howto100m_csv
