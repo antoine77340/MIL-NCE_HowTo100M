@@ -1,7 +1,7 @@
 #!/bin/bash
 
 python3 main_distributed.py --n_display=1 \
-       --batch_size=32 \
+       --batch_size=16 \
        --num_thread_reader=40 --cudnn_benchmark=1 --pin_memory \
        --checkpoint_dir=pmilnce --num_candidates=$2 --lr=0.001 \
        --warmup_steps=10000 --epochs=4 \
