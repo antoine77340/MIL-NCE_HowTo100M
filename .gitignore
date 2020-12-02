@@ -1,7 +1,21 @@
 ################################################################################
 # Project Specific Ignores
 ################################################################################
-data
+data/word2vec.pth
+data/validation.zip
+data/small_validation.zip
+data/small_howto100m_videos.txt
+data/small_howto100m_noend.txt
+data/small_data.zip
+data/extract_videos.sh
+data/howto100m_csv
+data/validation
+data/small_train_videos
+data/howto100m_videos.txt
+data/small_val_videos
+data/small_val_videos.csv
+
+
 howto100m_captions.zip
 word2vec.zip
 
