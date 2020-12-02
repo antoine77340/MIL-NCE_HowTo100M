@@ -31,7 +31,7 @@ class PMILNCELoss(th.nn.Module):
         std_b   = code_b[:, :, code_len:]
 
         loss = (means_a - means_b)**2 / (std_a**2 + std_b**2) + th.log(std_a**2 + std_b**2)
-        loss = 0.5 * (loss.sum(dim=2) + code_len * th.log(2 * 3.1415927410125732))
+        loss = 0.5 * (loss.sum(dim=2) + code_len * th.log(torch.FloatTensor(2 * 3.1415927410125732).to(loss)))
 
         return loss
 
