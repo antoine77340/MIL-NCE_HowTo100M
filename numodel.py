@@ -42,8 +42,8 @@ class Model(nn.Module):
 
     def normalize_video(self, video):
         # TODO: normalize according to https://pytorch.org/docs/stable/torchvision/models.html#video-classification
-        means = torch.FloatTensor([0.43216, 0.394666, 0.37645]).view(1, -1, 1, 1, 1).to(self.video_model.fc.weight)
-        stds  = torch.FloatTensor([0.22803, 0.22145, 0.216989]).view(1, -1, 1, 1, 1).to(self.video_model.fc.weight)
+        means = th.FloatTensor([0.43216, 0.394666, 0.37645]).view(1, -1, 1, 1, 1).to(self.video_model.fc.weight)
+        stds  = th.FloatTensor([0.22803, 0.22145, 0.216989]).view(1, -1, 1, 1, 1).to(self.video_model.fc.weight)
         video = (video / video.std(dim=(0, 2, 3, 4)).view(1, -1, 1, 1, 1)) * stds
         video = (video - video.mean(dim=(0, 2, 3, 4)).view(1, -1, 1, 1, 1)) + means
         return video
