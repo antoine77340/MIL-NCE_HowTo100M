@@ -20,16 +20,6 @@ class PMILNCELoss(th.nn.Module):
     def __init__(self):
         super(PMILNCELoss, self).__init__()
 
-    def forward(self, video_embd, text_embd):
-        x = code_compare(video_embd, text_embd)
-        x = x.view(video_embd.shape[0], video_embd.shape[0], -1)
-        nominator = x * th.eye(x.shape[0])[:,:,None].cuda()
-        nominator = nominator.sum(dim=1)
-        nominator = th.logsumexp(nominator, dim=1)
-        denominator = th.cat((x, x.permute(1,0,2)), dim=1).view(x.shape[0], -1)
-        denominator = th.logsumexp(denominator, dim=1)
-        return th.mean(denominator - nominator)
-
     def code_compare(self, code_a, code_b):
         code_len = code_a.shape[1]//2
         code_a = th.stack([code_a]*code_b.shape[0], dim=1)
@@ -44,3 +34,13 @@ class PMILNCELoss(th.nn.Module):
         loss = 0.5 * (loss.sum(dim=2) + code_len * th.log(2 * 3.1415927410125732))
 
         return loss
+
+    def forward(self, video_embd, text_embd):
+        x = self.code_compare(video_embd, text_embd)
+        x = x.view(video_embd.shape[0], video_embd.shape[0], -1)
+        nominator = x * th.eye(x.shape[0])[:,:,None].cuda()
+        nominator = nominator.sum(dim=1)
+        nominator = th.logsumexp(nominator, dim=1)
+        denominator = th.cat((x, x.permute(1,0,2)), dim=1).view(x.shape[0], -1)
+        denominator = th.logsumexp(denominator, dim=1)
+        return th.mean(denominator - nominator)
