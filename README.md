@@ -214,7 +214,7 @@ This table compares the retrieval results with the original implementation and t
 ### Evaluation on YouCook2
 
 This evaluation will run the zero-shot text-video retrieval on the validation YouCook2 videos.
-Please replace *the_path_to_the_checkpoint* by your model checkpoint path and *path_to_the_youcook_videos* to the root folder containing the downloaded MSR-VTT testing videos. 
+Please replace *the_path_to_the_checkpoint* by your model checkpoint path and *path_to_the_youcook_videos* to the root folder containing the downloaded YouCook2 testing videos. 
 
 ```sh
 python eval_youcook.py --batch_size=16  --num_thread_reader=20 --num_windows_test=10 \
